@@ -1,0 +1,256 @@
+{% load static %}
+<html>
+<head>
+	<title>Sun & Her Flowers Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'synerd/theme.css' %}" />
+	<script src="{% static 'synerd/javas.js' %}"></script>
+</head>
+<body>
+
+<!-- Top section of website containing title, links, search, donate button, logo, login, and join us -->
+	<div class="top_section">
+		<div class="title_container">
+			<h1 class="heading">Sun & Her Flowers</h1>
+			<p class="subheading">Foster Children Charity Group</p>
+			<div class="logo_container">
+			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+			<path style="fill:#FFA600;" d="M507.834,301.608l-54.769-48.312l52.832-50.399c1.941-1.852,2.74-4.591,2.099-7.189
+			c-0.642-2.597-2.629-4.655-5.211-5.401l-70.316-20.292l25.988-68.056c0.955-2.5,0.495-5.316-1.204-7.389
+			c-1.7-2.072-4.383-3.085-7.038-2.657l-72.274,11.652l-5.878-72.561c-0.216-2.666-1.846-5.015-4.275-6.161
+			c-2.429-1.146-5.291-0.917-7.504,0.601l-60.266,41.342L263.409,3.742C262.064,1.426,259.579,0,256.889,0
+			c-2.69,0-5.174,1.426-6.519,3.742L208.347,76.11l-72.69-41.953c-2.327-1.343-5.197-1.349-7.528-0.018
+			c-2.333,1.331-3.773,3.799-3.78,6.473l-0.176,72.795l-72.965-6.014c-2.675-0.22-5.275,0.997-6.807,3.194
+			c-1.533,2.197-1.771,5.041-0.622,7.459l31.242,65.835L6.508,209.562c-2.516,0.943-4.335,3.15-4.773,5.789
+			c-0.438,2.638,0.575,5.308,2.656,7.003l56.619,46.152l-50.813,52.41c-1.866,1.925-2.559,4.694-1.816,7.264
+			c0.744,2.57,2.81,4.55,5.419,5.194l71.055,17.551L61.56,419.936c-0.856,2.535-0.286,5.331,1.494,7.336
+			c1.781,2.005,4.502,2.913,7.137,2.382l71.76-14.443l8.721,72.278c0.319,2.655,2.041,4.938,4.513,5.99
+			c2.474,1.052,5.323,0.712,7.475-0.891l58.596-43.647l39.055,59.566c1.382,2.179,3.789,3.492,6.367,3.492
+			c0.098,0,0.196-0.002,0.295-0.006c2.687-0.104,5.115-1.626,6.368-3.992l34.107-62.405l61.839,38.974
+			c2.273,1.432,5.137,1.55,7.522,0.31c2.382-1.24,3.919-3.65,4.03-6.322l3.031-72.734l72.674,8.84c2.664,0.324,5.31-0.791,6.928-2.927
+			c1.618-2.137,1.966-4.969,0.914-7.43l-28.636-66.997l69.465-23.003c2.552-0.845,4.456-2.979,4.997-5.599
+			C510.752,306.09,509.845,303.383,507.834,301.608z"/>
+			<ellipse style="fill:#FFDB2D;" cx="254.35" cy="254.691" rx="155.069" ry="154.949"/>
+			<path style="fill:#FFCA00;" d="M254.354,99.743c-3.884,0-7.732,0.147-11.543,0.428c80.25,5.901,143.525,72.825,143.525,154.521
+				c0,81.695-63.275,148.619-143.525,154.521c3.811,0.28,7.66,0.428,11.543,0.428c85.641,0,155.068-69.373,155.068-154.948
+				C409.422,169.116,339.995,99.743,254.354,99.743z"/>
+			</div>
+		</div>
+		<div class="top_links">
+			<a href="sf_gallery.html" class="galleries">Gallery</a>
+			<a href="sf_about_us.html" class="about">About Us</a>
+			<a href="sf_contact_us.html" class="contact">Contact Us</a>
+			<form action="/search" class="search w-clearfix w-form"><input type="search" class="w-input" maxlength="256" name="query" 
+			placeholder="Enter search..." id="search" required=""><input type="submit" value="Search" class="search-button w-button"></form>
+		</div>
+		
+		<div class="slogan_donate">
+			<div class="text-block">Spreading Hope & Compassion</div>
+			<div class="donate_button">
+				<a href="sf_donate.html"><button type="button" class="MyButton button">Donate</button></a>
+			</div>
+		</div>
+		
+		<div class="reg_section">
+			<a href="{% url 'dashboard' %}" class="dashboard">Dashboard</a>
+			<p class="divider1">|</p>
+			<a href="{% url 'login' %}" class="signin">Sign In</a>
+			<p class="divider2">|</p>
+			<a href="{% url 'form' %}" class="join">Join Us</a>
+		</div>
+	</div>
+	
+<!-- Second section containing geolocation button and navbar with subnav -->	
+	<div class="tabs_section w-clearfix">
+		<div class="location">
+			<p>Click to share your location.</p>
+			<button onclick="getLocation()">Share Location</button>
+		</div>
+		<div class="tab_container">
+			<div class="navbar">
+				<div class="subnav">
+					<button class="subnavbtn">Resources <i class="arrow down"></i></button>
+					<div class="subnav-content">
+						<a href="sf_default_page.html">Foster Programs</a>
+						<a href="sf_default_page.html">Event Calendar</a>
+						<a href="{% url 'form' %}">Join Us</a>
+					</div>
+				</div> 
+				<div class="subnav">
+					<button class="subnavbtn">Members <i class="arrow down"></i></button>
+					<div class="subnav-content">
+						<a href="sf_default_page.html">Our Team</a>
+						<a href="sf_default_page.html">Our Mission</a>
+						<a href="{% url 'form' %}">Join Us</a>
+					</div>
+				</div> 
+				<div class="subnav">
+					<button class="subnavbtn">Our Work <i class="arrow down"></i></button>
+					<div class="subnav-content">
+						<a href="sf_default_page.html">Funds Raised</a>
+						<a href="sf_default_page.html">Outreach</a>
+						<a href="{% url 'form' %}">Join Us</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- Third section containing image slideshow -->
+<div class="slideshow-container">
+	
+	<!-- Full-width images with number and caption text -->
+	<div class="mySlides fade">
+		<div class="numbertext">1 / 3</div>
+		<img src="charity_jarz.jpg" style="width:100%; max-height: 500px">
+		<div class="text">Every donation counts. No matter how small. Did you know that 75% of our donations that come in are less than the price of a cheap breakfast? Even spare change can go a long way.</div>
+	</div>
+	
+	<div class="mySlides fade">
+		<div class="numbertext">2 / 3</div>
+		<img src="charity_group.jpg" style="width:100%; max-height: 500px">
+		<div class="text">Our team is dedicated to helping those in need. Our full staff has chosen to be here to help promote the better good. We strive to provide shelter and resources for children without families.</div>
+	</div>
+	
+	<div class="mySlides fade">
+		<div class="numbertext">3 / 3</div>
+		<img src="charity_hands.jpg" style="width:100%; max-height: 500px">
+		<div class="text">Each of us can make a difference if we work together. When we all join together, we can help foster children to have better lives and find homes.</div>
+	</div>
+	
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+	
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span> 
+	<span class="dot" onclick="currentSlide(2)"></span> 
+	<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+		
+	<div class="main_section">
+		<div class="row">
+			<div class="column left">
+				<!-- Tab links -->
+				<div class="tab">
+					<button class="tablinks" onclick="openTab(event, 'FosterChildren')">Foster Children</button>
+					<button class="tablinks" onclick="openTab(event, 'AssistancePrograms')">Assistance Programs</button>
+					<button class="tablinks" onclick="openTab(event, 'IDProtection')">ID Protection</button>
+				</div>
+
+				<!-- Tab content -->
+				<div id="FosterChildren" class="tabcontent">
+					<h3>Foster Children</h3>
+					<ul>
+						<li>If you are interested in fostering a child, we can begin the process today.</li> 
+						<li>We work with fostering agencies to help interested parties find children that may be a fit for their family. This is a serious process that helps to give children better lives.</li>
+						<li>Interested parties can schedule appointments through our outreach program to meet children that are candidates for fostering.</li>
+					</ul>
+				</div>
+
+				<div id="AssistancePrograms" class="tabcontent">
+					<h3>Assistance Programs</h3>
+					<ul>
+						<li>We have serveral programs available to anyone who are interested in finding ways to help with children in need.</li>
+						<li>There are programs available to help feed, and provide activities for children.</li>
+						<li>Those interested in enrolling in one of these programs can visit our resources page and discover all of the many ways that people are giving help to foster children.</li>
+					</ul>
+				</div>
+				
+				<div id="IDProtection" class="tabcontent">
+					<h3>ID Protection</h3>
+					<ul>
+						<li>We ensure that all anonymous donations remain anonymous.</li>
+						<li>Information used to submit donations is encrypted and protected.</li>
+						<li>Information such as emails, names, and financial information is kept private and will not be used for any other purpose other than processing donations or subscribing to our site.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="column right">
+				<h2>What's New?</h2>
+				<div class="announce_feature">
+				<p>Announcements</p>
+				<ul>
+					<li class="announcement_bullets">Total donations have surpassed our $1 million goal!</li>
+					<li class="announcement_bullets">A foster child meet-and-greet will be taking place on September 17th.</li>
+				</ul>
+				</div>
+				<div class="announce_feature">
+				<p>Features</p>
+					<ul>
+					<li class="announcement_bullets">Secure and anonymous ways to easily donate!</li>
+					<li class="announcement_bullets">Excellent systems in place to foster children!</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="feature_section">
+		<h1>Featured Event</h1>
+		<h2>Foster Child Meet & Greet</h2>
+		<p class="leftern">Central Park <br>1234 Main Street, Los Angeles, CA<br>September 17th <br>11 a.m. - 3 p.m.</p>
+		<p class="rightmost">Come join us on September 17th at Central Park to meet our foster children! <br>
+		This event gives interested parties a chance to come meet some of the <br>
+		amazing foster children and ask any questions that they may have. <br>
+		Please spread the word and consider attending if you are interested <br>
+		in learning more about our foster children.</p>
+	</div>
+	<div class="drag_drop_section">
+		<h2>Rate Our Website!</h2>
+		<p>Move the sun to the section you think best describes our website!</p><br>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">		
+			<p>Poor</p>
+		</div>
+		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<p>Decent</p>
+		</div>
+		<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<p>Good</p>
+			<img src="sun.jpg" alt="sun" draggable="true" ondragstart="drag(event)" id="drag1" width="auto" height="100px">
+		</div>
+		<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<p>Great</p>
+		</div>
+		<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<p>Excellent</p>
+		</div>
+	</div>
+	<div class="bottom_section">
+	<section class="bottom_container">
+			<div class="links_1">
+			<a href="sf_default_page.html">Get Involved</a><br><br>
+			<a href="sf_default_page.html">Blog</a><br><br>
+			<a href="sf_default_page.html">Ways to Give</a>
+			</div>
+			<div class="links_2">
+			<a href="sf_about_us.html">About Us</a><br><br>
+			<a href="sf_default_page.html">Revenues</a><br><br>
+			<a href="sf_default_page.html">Expenditures</a>
+			</div>
+		</section>
+		<h1 class="bottom_header">Sun & Her Flowers<br></h1>
+		<p class="bottom_left">5432 East Camden Street, <br>
+		Los Angeles, CA, 95211<br>
+		Phone: (375)728-8888<br>
+		sunflowercharity@gmail.com<br>
+		www.sunflowercharity.com<br></p>
+		<br>
+		<p class="bottom_nav">
+			<ul>
+				<li><a href="sf_default_page.html">Site Map</a></li>
+				<li><a href="sf_default_page.html">Terms & Conditions</a></li>
+				<li><a href="sf_default_page.html">Privacy Policy</a></li>
+				<li><a href="sf_default_page.html">Copyright @ 2019</a></li>
+			</ul>
+		</p>
+		
+	</div>
+	<script>
+	showSlides(slideIndex);
+	</script>
+</body>

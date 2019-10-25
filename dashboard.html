@@ -1,0 +1,304 @@
+{% load static %}
+<html>
+<head>
+	<title>Sun & Her Flowers Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'synerd/theme.css' %}" />
+	<script src="javas.js"></script>
+</head>
+<body>
+	<div class="upper_section">
+		<p class="left_side">Sun & Her Flowers Foster Children Charity Group</p>
+		<p class="right_side">Spreading Hope & Compassion</p>
+		<div class="logo_container">
+			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+			<path style="fill:#FFA600;" d="M507.834,301.608l-54.769-48.312l52.832-50.399c1.941-1.852,2.74-4.591,2.099-7.189
+			c-0.642-2.597-2.629-4.655-5.211-5.401l-70.316-20.292l25.988-68.056c0.955-2.5,0.495-5.316-1.204-7.389
+			c-1.7-2.072-4.383-3.085-7.038-2.657l-72.274,11.652l-5.878-72.561c-0.216-2.666-1.846-5.015-4.275-6.161
+			c-2.429-1.146-5.291-0.917-7.504,0.601l-60.266,41.342L263.409,3.742C262.064,1.426,259.579,0,256.889,0
+			c-2.69,0-5.174,1.426-6.519,3.742L208.347,76.11l-72.69-41.953c-2.327-1.343-5.197-1.349-7.528-0.018
+			c-2.333,1.331-3.773,3.799-3.78,6.473l-0.176,72.795l-72.965-6.014c-2.675-0.22-5.275,0.997-6.807,3.194
+			c-1.533,2.197-1.771,5.041-0.622,7.459l31.242,65.835L6.508,209.562c-2.516,0.943-4.335,3.15-4.773,5.789
+			c-0.438,2.638,0.575,5.308,2.656,7.003l56.619,46.152l-50.813,52.41c-1.866,1.925-2.559,4.694-1.816,7.264
+			c0.744,2.57,2.81,4.55,5.419,5.194l71.055,17.551L61.56,419.936c-0.856,2.535-0.286,5.331,1.494,7.336
+			c1.781,2.005,4.502,2.913,7.137,2.382l71.76-14.443l8.721,72.278c0.319,2.655,2.041,4.938,4.513,5.99
+			c2.474,1.052,5.323,0.712,7.475-0.891l58.596-43.647l39.055,59.566c1.382,2.179,3.789,3.492,6.367,3.492
+			c0.098,0,0.196-0.002,0.295-0.006c2.687-0.104,5.115-1.626,6.368-3.992l34.107-62.405l61.839,38.974
+			c2.273,1.432,5.137,1.55,7.522,0.31c2.382-1.24,3.919-3.65,4.03-6.322l3.031-72.734l72.674,8.84c2.664,0.324,5.31-0.791,6.928-2.927
+			c1.618-2.137,1.966-4.969,0.914-7.43l-28.636-66.997l69.465-23.003c2.552-0.845,4.456-2.979,4.997-5.599
+			C510.752,306.09,509.845,303.383,507.834,301.608z"/>
+			<ellipse style="fill:#FFDB2D;" cx="254.35" cy="254.691" rx="155.069" ry="154.949"/>
+			<path style="fill:#FFCA00;" d="M254.354,99.743c-3.884,0-7.732,0.147-11.543,0.428c80.25,5.901,143.525,72.825,143.525,154.521
+				c0,81.695-63.275,148.619-143.525,154.521c3.811,0.28,7.66,0.428,11.543,0.428c85.641,0,155.068-69.373,155.068-154.948
+				C409.422,169.116,339.995,99.743,254.354,99.743z"/>
+		</div>
+	</div>
+	<div class="left_bar">
+		<div id="tab_container">
+			<br />
+			<a href="{% url 'index' %}"><button type="button" class="MyButton">Home</button></a>
+			<br />
+			<br />
+			<a href="sf_donate.html"><button type="button" class="MyButton">Donate</button></a>
+			<br />
+			<br />
+			<a href="sf_gallery.html"><button type="button" class="MyButton">Galleries</button></a>
+			<br />
+			<br />
+			<a href="{% url 'form' %}"><button type="button" class="MyButton">Join Us</button></a>
+			<br />
+			<br />
+			<a href="sf_about_us.html"><button type="button" class="MyButton">About Us</button></a>
+			<br />
+			<br />
+			<a href="sf_contact_us.html"><button type="button" class="MyButton">Contact Us</button></a>
+		</div>
+	</div>
+	<div class="form_main_view">
+		<h2>Office Form</h2>
+				<p>Fill out the form below to submit information about an office.</p>
+				<form action="http://symlink.dk/code/php/submit/" method="get">
+					<fieldset>
+						<legend>Office Information:</legend>
+						<label>Office Name:
+						<input type="text" name="office_name" required="required" minlength="3" autocomplete="on" autofocus></label>
+						<br />
+						<br>
+						<label>Office Code:
+						<input type="text" name="office_code" minlength="3" required="required" autocomplete="off"></label>
+						<br />
+						<br />
+						<label>Attribution:
+						<input type="text" name="attribution" minlength="3" required="required" autocomplete="off"></label>
+						<br />
+						<br />
+						<input type="reset"><br><br>
+						<input type="submit" name="submit" value="Submit Form" class="MySubmit MySubmit1" />
+						<input type="submit" name="submit" formtarget="_blank" value="Submit Form to a New Window" class="MySubmit" />
+					</fieldset>
+				</form>
+				<h2>Officer Form</h2>
+				<p>Fill out the form below to submit information about an officer.</p>
+				<form action="http://symlink.dk/code/php/submit/" method="get">
+					<br>
+					<fieldset>
+						<legend>Officer Information:</legend>
+						<label>Subscriber ID:
+						<input type="text" name="subscriber_id" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Office Code:
+						<input type="text" name="office_code" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Start Date:
+						<input type="date" name="start_date" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>End Date:
+						<input type="date" name="end_date" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<input type="reset"><br><br>
+						<input type="submit" name="submit" value="Submit Form" class="MySubmit MySubmit1" />
+						<input type="submit" name="submit" formtarget="_blank" value="Submit Form to a New Window" class="MySubmit" />
+					</fieldset>
+				</form>
+				<h2>Organization Form</h2>
+				<p>Fill out the form below to submit information about an organization.</p>
+				<form action="http://symlink.dk/code/php/submit/" method="get">
+					<fieldset>
+						<legend>Organization Information:</legend>
+						<label>Organization Code:
+						<input type="text" name="org_code" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Organization Name:
+						<input type="text" name="org_name" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Description:
+						<input type="text" name="description" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Date Joined:
+						<input type="date" name="date_joined" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Address 1:
+						<input type="text" name="address1" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Address 2:
+						<input type="text" name="address2" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>City:
+						<input type="text" name="city" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>State:
+						<select name="state" required="required">
+							<option value="" disabled selected>Select an option</option>
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CO">Colorado</option>
+							<option value="CT">Connecticut</option>
+							<option value="DE">Delaware</option>
+							<option value="DC">District Of Columbia</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="HI">Hawaii</option>
+							<option value="ID">Idaho</option>
+							<option value="IL">Illinois</option>
+							<option value="IN">Indiana</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="KY">Kentucky</option>
+							<option value="LA">Louisiana</option>
+							<option value="ME">Maine</option>
+							<option value="MD">Maryland</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MI">Michigan</option>
+							<option value="MN">Minnesota</option>
+							<option value="MS">Mississippi</option>
+							<option value="MO">Missouri</option>
+							<option value="MT">Montana</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NH">New Hampshire</option>
+							<option value="NJ">New Jersey</option>
+							<option value="NM">New Mexico</option>
+							<option value="NY">New York</option>
+							<option value="NC">North Carolina</option>
+							<option value="ND">North Dakota</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="OR">Oregon</option>
+							<option value="PA">Pennsylvania</option>
+							<option value="RI">Rhode Island</option>
+							<option value="SC">South Carolina</option>
+							<option value="SD">South Dakota</option>
+							<option value="TN">Tennessee</option>
+							<option value="TX">Texas</option>
+							<option value="UT">Utah</option>
+							<option value="VT">Vermont</option>
+							<option value="VA">Virginia</option>
+							<option value="WA">Washington</option>
+							<option value="WV">West Virginia</option>
+							<option value="WI">Wisconsin</option>
+							<option value="WY">Wyoming</option>
+						</select><br />
+						<br>
+						<label>Zip Code:
+						<input type="text" name="zipcode" required="required" min="10000" max="99999" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Phone Number:
+						<input type="tel" name="phone_number" required="required" min="1000000000" autocomplete="on"></label>
+						<br />
+						<br>
+						<input type="reset"><br><br>
+						<input type="submit" name="submit" value="Submit Form" class="MySubmit MySubmit1" />
+						<input type="submit" name="submit" formtarget="_blank" value="Submit Form to a New Window" class="MySubmit" />
+					</fieldset>
+				</form>
+				<h2>Organization Member Form</h2>
+				<p>Fill out the form below to submit information about an organization member.</p>
+				<form action="http://symlink.dk/code/php/submit/" method="get">
+					<fieldset>
+						<legend>Organization Member Information:</legend>
+						<label>Organization Code:
+						<input type="text" name="org_code" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Subscriber ID:
+						<input type="text" name="subscriber_id" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Membership Start Date:
+						<input type="date" name="membership_start_date" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Membership End Date:
+						<input type="date" name="membership_end_date" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Native Country:
+						<input type="text" name="native_country" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Citizenship:
+						<input type="text" name="citizenship" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Delegate Status (Yes/No):
+						<select name="isdelegate" required="required">
+							<option value="" disabled selected>Select an option</option>
+							<option value="Yes">Yes</option>
+							<option value="No">No</option><br />
+						</select>
+						<br />
+						<br>
+						<input type="reset"><br><br>
+						<input type="submit" name="submit" value="Submit Form" class="MySubmit MySubmit1" />
+						<input type="submit" name="submit" formtarget="_blank" value="Submit Form to a New Window" class="MySubmit" />
+					</fieldset>
+				</form>
+				<h2>Subscriber Form</h2>
+				<p>Fill out the form below to submit information about a subscriber.</p>
+				<form action="http://symlink.dk/code/php/submit/" method="get">
+					<fieldset>
+						<legend>Subscriber Information:</legend>
+						<label>Subscriber ID:
+						<input type="text" name="subscriber_id" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Service Code:
+						<input type="text" name="service_code" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Subscription Request Date:
+						<input type="date" name="subscription_request_date" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Subscription Start Date:
+						<input type="date" name="subscription_start_date" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Subscription End Date:
+						<input type="date" name="subscription_end_date" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Motif of Cancellation:
+						<input type="text" name="motif_of_cancellation" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Subscription Type (Individual/Organization):
+						<select name="subscription_type" required="required">
+							<option value="" disabled selected>Select an option</option>
+							<option value="Individual">Individual</option>
+							<option value="Organization">Organization</option><br />
+						</select><br />
+						<br>
+						<label>Username:
+						<input type="text" name="username" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<label>Beneficiary ID:
+						<input type="text" name="beneficiary_id" required="required" autocomplete="on"></label>
+						<br />
+						<br>
+						<input type="reset"><br><br>
+						<input type="submit" name="submit" value="Submit Form" class="MySubmit MySubmit1" />
+						<input type="submit" name="submit" formtarget="_blank" value="Submit Form to a New Window" class="MySubmit" />
+					</fieldset>
+				</form>
+				
+	</div>
+
+</body>
